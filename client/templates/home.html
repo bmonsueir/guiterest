@@ -1,0 +1,10 @@
+<template name = "home">
+    <h1>Welcome to Guitarest!</h1>
+    {{#each guitars}}
+    <div class = "item well col-sm-4">
+        <h4>{{name}}</h4>
+        <iframe src = "{{url}}"></iframe>
+        <p>{{description}}</p>
+    </div>
+    {{/each}}
+</template>

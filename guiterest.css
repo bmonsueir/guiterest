@@ -1,1 +1,32 @@
 /* CSS declarations go here */
+h1{
+    color: #FFFFFF;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+button{
+    margin: 20px;
+}
+div{
+    margin: 5px;
+}
+.mediumPicture{
+    width: 100px;
+    height: 150px:
+}
+input{
+margin: 20px;
+}
+body{
+    background-color: #AAAAAA;
+}
+.navbar{
+    background-color: #CCCCFF;
+}
+#login-buttons{
+    line-height: 50px;
+    display: block;
+}

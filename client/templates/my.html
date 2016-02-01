@@ -1,0 +1,22 @@
+<template name = "my">
+    <h1>My Guitarest</h1>
+   <div class = "well">
+        <h3>Add New Link</h3>
+        <form class = "add">
+          Name: <input type="text" name="name"><br>
+          Picture url: <input type="text" name="url"><br>
+          Description: <input type="text" name="description"><br>
+          <input type="submit" value="Submit">
+        </form>
+    </div>
+    <h3>My Guitars</h3>
+    {{#with guitars}}
+        {{#each guitars}}
+        <div>
+            {{name}}
+            <img src = "{{url}}"/>
+            {{description}}
+        </div>
+        {{/each}}
+    {{/with}}
+</template>
