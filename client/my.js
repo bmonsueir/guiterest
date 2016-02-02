@@ -9,11 +9,12 @@ Template.my.helpers({
                 guitars.push({
                     name: guitar[i].name,
                     url: guitar[i].url,
-                    description: guitar[i].description
+                    description: guitar[i].description,
+                    likes: guitar[i].likes.length
                 });
             }
         }
-        console.log(guitars);
+        //console.log(guitars);
         return guitars;
     }
 });
@@ -30,8 +31,9 @@ Template.my.events({
             createdBy: user,
             name: name,
             url: url,
-            description: description
+            description: description,
+            likes: []
         });
-console.log(user, name, url, description);
+//console.log(user, name, url, description);
     }
 });

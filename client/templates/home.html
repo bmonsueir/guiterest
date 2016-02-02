@@ -1,10 +1,15 @@
 <template name = "home">
     <h1>Welcome to Guitarest!</h1>
-    {{#each guitars}}
-    <div class = "item well col-sm-4">
-        <h4>{{name}}</h4>
-        <iframe src = "{{url}}"></iframe>
-        <p>{{description}}</p>
+    <div class="grid">
+        {{#each guitars}}
+            <div class="grid-item">
+                <h4>{{name}}</h4>
+                <img src = "{{url}}" />
+                <p>{{description}}</p>
+                <p><button class = "like" data-toggle="tooltip" title = "like this">
+                    <img src = "guitar_icon.png"/> </button>{{likes}} like{{#if isGTO}}s{{/if}}
+                    {{#if iLike}}<span class = "iLike">{{iLike}}</span> {{/if}}</p>
+            </div>
+        {{/each}}
     </div>
-    {{/each}}
 </template>

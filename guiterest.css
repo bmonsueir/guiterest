@@ -30,3 +30,47 @@ body{
     line-height: 50px;
     display: block;
 }
+.grid {
+
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  float: left;
+  background: #888888;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+img{
+    width: 100%;
+}
+.grid-sizer,
+.grid-item {
+  width: 23%;
+}
+.like{
+    width: 10%;
+}
+.iLike{
+    color: #FFFFFF;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    border: 1px solid #00FF00;
+    border-radius: 10px;
+    float: right;
+    margin: 5px;
+    padding: 5px;
+}
