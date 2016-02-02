@@ -10,7 +10,8 @@ Template.my.helpers({
                     name: guitar[i].name,
                     url: guitar[i].url,
                     description: guitar[i].description,
-                    likes: guitar[i].likes.length
+                    likes: guitar[i].likes.length,
+                    _id: guitar[i]._id
                 });
             }
         }
@@ -27,6 +28,7 @@ Template.my.events({
         var url = event.target.url.value;
         var description = event.target.description.value;
         console.log(name, user);
+        if(user && url && description){
         Guitars.insert({
             createdBy: user,
             name: name,
@@ -34,6 +36,17 @@ Template.my.events({
             description: description,
             likes: []
         });
+    }
+        event.target.name.value = "";
+        event.target.url.value = "";
+        event.target.description.value = "";
+
 //console.log(user, name, url, description);
+    },
+    "click .delete": function(event,template){
+        event.preventDefault();
+        if(confirm("Are you sure that you want to delete this?")){
+        Guitars.remove({_id:this._id});
+    }
     }
 });

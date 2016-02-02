@@ -13,7 +13,7 @@
     {{#with guitars}}
         {{#each guitars}}
         <div>
-            {{name}} - {{description}} -{{likes}} likes
+            <span class = "header">Title</span>: {{name}} <span class = "with"> with {{likes}} likes </span> <span class = "header"> Description: </span> {{description}} <button class = "delete">X</button>
             <img src = "{{url}}"/>
         </div>
         {{/each}}

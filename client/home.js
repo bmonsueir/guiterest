@@ -25,12 +25,10 @@ guitars: function(){
                 iLike: iLike,
                 isGTO: isGTO
             });
-
-    }
+        }
     //console.log(guitars);
     return guitars;
-}
-
+    }
 });
 $('.grid').masonry({
     itemSelector: '.grid-item',
@@ -46,6 +44,9 @@ Template.home.events({
         Guitars.update({_id:this._id}, {$push:{likes: user
         }});
     }
-        console.log(guitar.likes);
+        //console.log(guitar.likes);
     }
+});
+$("img").error(function () {
+  $(this._id).unbind("error").attr("src", "guitar_icon.png");
 });

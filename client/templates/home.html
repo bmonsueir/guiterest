@@ -1,14 +1,14 @@
 <template name = "home">
-    <h1>Welcome to Guitarest!</h1>
+    <h1 class = "text-center">Welcome to Guitarest!</h1>
     <div class="grid">
         {{#each guitars}}
             <div class="grid-item">
                 <h4>{{name}}</h4>
-                <img src = "{{url}}" />
+                <img src = "{{url}}" onError="this.onerror=null;this.src='guitar_no_image.png';" />
                 <p>{{description}}</p>
-                <p><button class = "like" data-toggle="tooltip" title = "like this">
+                {{#if currentUser}}<p><button class = "like" data-toggle="tooltip" title = "like this">
                     <img src = "guitar_icon.png"/> </button>{{likes}} like{{#if isGTO}}s{{/if}}
-                    {{#if iLike}}<span class = "iLike">{{iLike}}</span> {{/if}}</p>
+                    {{#if iLike}}<span class = "iLike">{{iLike}}</span> {{/if}}</p>{{/if}}
             </div>
         {{/each}}
     </div>
